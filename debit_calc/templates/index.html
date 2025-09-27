@@ -1,0 +1,27 @@
+<html>
+    <h1>
+        Дебетовый калькулятор
+    </h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>
+            <label for="name">Введите деньги:</label>
+            <input type="text" name="money" id="money" required>
+        </p>
+        <p>
+            <label for="name">Введите процент:</label>
+            <input type="text" name="percent" id="percent" required>
+        </p>
+        <p>
+            <label for="name">Укажите срок:</label>
+            <input type="text" name="dedlane" id="dedlane" required>
+        </p>
+        <p>
+            <input type="checkbox" id="chk1-label" name="capitalization"/>
+            <label for="chk1-label">Учитывать капиталиацию?</label>
+        </p>
+        <button type="submit">Отправить</button>
+        <h2>{{ result }}</h2>
+    </form>
+
+</html>
